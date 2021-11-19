@@ -279,17 +279,17 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div style={{ overflow: "hidden" }}>
       <div class="scroller">
+        <nav id="nav-main" class="skew">
+          <ul>
+            <li class="link">Link</li>
+            <li class="link">Link</li>
+            <li class="link">Link</li>
+            <li class="link">Link longer</li>
+          </ul>
+        </nav>
         <div class="cover-5">
-          <nav id="nav-main" class="skew">
-            <ul>
-              <li class="link">Link</li>
-              <li class="link">Link</li>
-              <li class="link">Link</li>
-              <li class="link">Link longer</li>
-            </ul>
-          </nav>
           <button
             id="menu-button"
             class="menu-button"
