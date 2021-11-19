@@ -81,7 +81,7 @@ function App() {
       trigger: "section.black",
       scroller: ".scroller",
       scrub: true,
-      markers: true,
+      markers: false,
       pin: true,
       start: () => "top top",
       end: () => "+=" + (images.length + 1) * window.innerHeight,
@@ -100,7 +100,7 @@ function App() {
 
     menuAnimation
       .to(navMain, {
-        duration: 0.8,
+        duration: 1,
         width: "100%",
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
         ease: "power2.inOut",
