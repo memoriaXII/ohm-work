@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 
 import heroImage from "./assets/heroImage.png";
+import coinImage from "./assets/Cam2.png";
 
 import ScrollOut from "scroll-out";
 import Splitting from "splitting";
@@ -136,14 +137,33 @@ function App() {
       t1.from(
         ".imsrk2",
         {
-          yPercent: -100,
+          yPercent: -50,
           duration: 2,
           ease: "power1.out",
-          opacity: 0,
-          scale: 5,
+          scale: 3,
+          autoAlpha: 1,
         },
         0
       );
+
+      gsap.to(
+        ".imsrk2",
+        {
+          autoAlpha: 0,
+        },
+        3
+      );
+
+      //in 2 seconds, fade back in with visibility:visible
+      // gsap.to(element, { duration: 2, autoAlpha: 1, delay: 2 });
+
+      // t1.fromTo(
+      //   ".imsrk2",
+      //   2,
+      //   { y: 0, autoAlpha: 1 },
+      //   { y: 0, autoAlpha: 0 },
+      //   1
+      // );
 
       // fromTo(content, 1, {opacity: 0, y: 50}, {opacity: 1, y: 0});
 
@@ -174,12 +194,16 @@ function App() {
         ease: "power1.out",
       });
 
-      t1.from(".gradient-block", {
-        yPercent: -100,
-        opacity: 0,
-        duration: 0.5,
-        ease: "power1.out",
-      });
+      t1.from(
+        ".gradient-block",
+        {
+          yPercent: -100,
+          opacity: 0,
+          duration: 0.5,
+          ease: "power1.out",
+        },
+        3
+      );
 
       t1.from(
         ".item",
@@ -340,7 +364,7 @@ function App() {
             </g>
           </svg>
 
-          <span style={{ color: "white" }}>MorreDao</span>
+          <span style={{ color: "white" }}>MorseDao</span>
 
           <ul class="items">
             <li class="item">Staked</li>
@@ -360,11 +384,13 @@ function App() {
                 data-scroll="out"
                 data-splitting=""
               >
-                MORRE DAO
+                Morse
+                <br />
+                DAO
               </p>
             </h1>
             <p class="sub-heading" style={{ opacity: 0.5, maxWidth: 600 }}>
-              MORRE DAO is building a community-owned decentralized financial
+              Morse DAO is building a community-owned decentralized financial
               infrastructure to bring more stability and transparency for the
               world.
             </p>
@@ -436,6 +462,30 @@ function App() {
                   <div></div>
                   <p>7,930%</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dao-hero">
+          <div class="dao-container">
+            <div class="dao-wrapper">
+              <div class="dao-content">
+                <h1 className="title">Introducing Morse DAO</h1>
+                <p class="des">
+                  We’re bringing Protocol Owned Liquidity to a DAO near you.
+                  Learn about <span>Morse DAO</span>, our Bonds-as-a-Service
+                  protocol.
+                </p>
+                {/* <p class="sub-des">
+                  This will enable us to create a DAO which will make key
+                  decisions, operate the treasury, and direct the Guild in a
+                  fair and equitable manner.
+                </p> */}
+              </div>
+              <div class="dao-inner-wrapper">
+                <img src={coinImage} />
+                {/* <img src="/static/media/daoChart.52f735e2.png" /> */}
               </div>
             </div>
           </div>

@@ -36,7 +36,20 @@ body {
   position: relative;
   height: 100vh;
   // overflow: hidden;
-  background-color: #040507;
+  background-color: #000000;
+  // background: url("./assets/grain.png"), linear-gradient(to top, black, #141515);
+  // background-image: linear-gradient(
+  //     to bottom,
+  //     rgba(0, 0, 0, 0.9),
+  //     rgba(0, 0, 0, 0.93)
+  //   ),
+  //   url("./assets/grain.png");
+  // width: 100%;
+  // height: 100vh;
+  // background-size: cover;
+  // background-position: center center;
+  // background-repeat: no-repeat;
+  // background-image: #050607, url("./assets/grain.png");
 }
 
 header {
@@ -162,10 +175,21 @@ header ul li {
 }
 
 .cover-5 {
-  background: linear-gradient(to bottom, #181e25, black);
+  // background: linear-gradient(to bottom, #181e25, black);
   position: absolute;
   width: 100%;
   height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(18, 9, 9, 0.4),
+      rgba(0, 0, 0, 0.63)
+    ),
+    url("./assets/grain.png");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   // overflow: hidden;
 }
 
@@ -627,5 +651,143 @@ p[data-scroll="in"] {
   // background: linear-gradient(to top, black, #141515);
   @media (max-width: 768px) {
     max-width: 100%;
+  }
+}
+
+.dao-container {
+  // background-color: #f5f9fa;
+  transform-origin: top left;
+
+  margin: 0 auto;
+  height: 100%;
+  padding: 0rem;
+  padding-left: 50px;
+  padding-bottom: 20px;
+  background-size: cover;
+  padding-bottom: 0px;
+  overflow: hidden;
+
+  // margin-bottom: 200px;
+  // border: 1px solid #d2f0fb;
+}
+// .dao-container > * {
+//   transform: skewY(6deg);
+//   transform: skewY(-6deg);
+// }
+
+.dao-wrapper {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  // max-width: 1500px;
+  max-width: 97%;
+}
+
+.dao-content {
+  width: 100%;
+  z-index: 1;
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+
+  .title {
+    font-family: "neuebold";
+    font-weight: 800;
+    text-transform: normal;
+    overflow: hidden;
+    display: block;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 110%;
+    /* or 26px */
+    text-align: left;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    /* #273A41 */
+
+    color: #dcdcdc;
+    max-width: 676px;
+    margin-top: 50px;
+  }
+  .des {
+    margin-top: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 590px;
+    color: #565c5e;
+    font-family: "euclidnormal";
+    span {
+      color: #ced6e2;
+      font-weight: bold;
+    }
+  }
+  .sub-des {
+    margin-top: 20px;
+    margin-right: 0px;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 455px;
+    font-family: "euclidnormal";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+    margin: auto;
+    /* or 21px */
+    font-feature-settings: "ss01" on, "salt" on;
+    color: #38484e;
+    margin-top: 20px;
+  }
+}
+
+.dao-inner-wrapper {
+  display: flex;
+  width: 70%;
+  // max-height: 500px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-left: auto;
+}
+
+@media (max-width: 1200px) {
+  .dao-wrapper {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1500px;
+  }
+}
+
+.dao-hero {
+  margin: auto;
+  text-align: center;
+  align-content: center;
+  position: relative;
+  width: 100%;
+  margin: auto;
+  margin-top: 150px;
+
+  h1 {
+    font-family: "neuenormal";
+    font-size: 36px;
+    font-weight: 400;
+  }
+
+  p {
+    font-family: "euclidnormal";
+    font-size: 13px;
+    font-weight: 400;
+    color: #38484e;
+    max-width: 598px;
+    text-align: left;
+    justify-content: left;
+    margin: auto;
+    margin-top: 30px;
   }
 }
