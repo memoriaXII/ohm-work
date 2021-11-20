@@ -340,7 +340,7 @@ function App() {
             </g>
           </svg>
 
-          {/* <span style={{ color: "white" }}>Morre Dao</span> */}
+          <span style={{ color: "white" }}>MorreDao</span>
 
           <ul class="items">
             <li class="item">Staked</li>
@@ -377,6 +377,69 @@ function App() {
             <img class="header-img" src={heroImage} alt="" />
           </div>
         </div>
+
+        <div className="card-hero">
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <span>{/* <img src={nftIcon} /> */}</span>
+                  <h4 class="card-title">Total OHM Staked</h4>
+                </div>
+              </div>
+              <div class="card-body">
+                <div>
+                  <div></div>
+                  <p>89.6%</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <span>{/* <img src={tokenIcon} /> */}</span>
+                  <h4 className="card-title">Treasury Balance</h4>
+                </div>
+              </div>
+              <div class="card-body">
+                <div>
+                  <div></div>
+                  <p>$728,935,112</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <span>{/* <img src={gameIcon} /> */}</span>
+                  <h4 class="card-title">Total Value Locked</h4>
+                </div>
+              </div>
+              <div class="card-body">
+                <div>
+                  <div></div>
+                  <p>$2,970,358,744</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <span>{/* <img src={pieIcon} /> */}</span>
+                  <h4 class="card-title">Current APY</h4>
+                </div>
+              </div>
+              <div class="card-body">
+                <div>
+                  <div></div>
+                  <p>7,930%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="imsrk2">
@@ -387,7 +450,6 @@ function App() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* <g id="word2" fill="#fff"> */}
           <g id="word2">
             <path
               class="path"
@@ -420,7 +482,6 @@ function App() {
             />
           </g>
         </svg>
-        {/* MORRE Dao */}
       </div>
     </div>
   );
