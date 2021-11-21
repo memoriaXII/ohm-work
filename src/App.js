@@ -638,8 +638,8 @@ function App() {
             </div>
 
             <div class="footer-column">
-              <ul class="some-list" style={{ marginLeft: 20 }}>
-                <li class="some-list-item">Join us</li>
+              <ul class="some-list">
+                {/* <li class="some-list-item">Join us</li> */}
                 <li class="some-list-item">
                   <a href="#" class="some-list-link">
                     <svg
