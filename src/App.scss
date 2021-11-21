@@ -59,7 +59,7 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 210px 14px;
+  padding: 10px 14px;
   // border-bottom: 1px solid rgba(96, 96, 96, 0.2);
 
   span {
@@ -125,7 +125,7 @@ header ul li {
 
 .container .right h1 {
   color: white;
-  font-size: 124px;
+  font-size: 54px;
   font-weight: 900;
   display: inline-block;
   line-height: 1;
@@ -166,8 +166,8 @@ header ul li {
   height: 100vh;
   background-image: linear-gradient(
       to bottom,
-      rgba(18, 9, 9, 0.4),
-      rgba(4, 2, 2, 0.75)
+      rgba(18, 9, 9, 0.2),
+      rgba(4, 2, 2, 0.95)
     ),
     url("./assets/grain.png");
   width: 100%;
@@ -175,7 +175,7 @@ header ul li {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-
+  overflow-x: hidden;
   // overflow: hidden;
 }
 
@@ -518,7 +518,7 @@ p[data-scroll="in"] {
   left: 0;
   top: 0;
   font-family: "neuebold";
-  font-size: 124px;
+  // font-size: 124px;
 }
 
 @keyframes glitch-switch {
@@ -1085,12 +1085,12 @@ footer {
   // margin-bottom: 200px;
   padding-top: 50px;
   // height: 300px;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 1),
-      rgba(21, 21, 21, 0.75)
-    ),
-    url("./assets/grain.png");
+  // background-image: linear-gradient(
+  //     to bottom,
+  //     rgba(0, 0, 0, 1),
+  //     rgba(21, 21, 21, 0.75)
+  //   ),
+  //   url("./assets/grain.png");
   width: 100%;
   background-size: cover;
   background-position: center center;

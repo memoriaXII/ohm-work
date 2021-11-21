@@ -141,7 +141,7 @@ function App() {
           yPercent: -50,
           duration: 2,
           ease: "power1.out",
-          scale: 3,
+          scale: 2,
           autoAlpha: 1,
         },
         0
@@ -152,35 +152,10 @@ function App() {
         {
           autoAlpha: 0,
         },
-        3
+        2
       );
 
-      //in 2 seconds, fade back in with visibility:visible
-      // gsap.to(element, { duration: 2, autoAlpha: 1, delay: 2 });
-
-      // t1.fromTo(
-      //   ".imsrk2",
-      //   2,
-      //   { y: 0, autoAlpha: 1 },
-      //   { y: 0, autoAlpha: 0 },
-      //   1
-      // );
-
-      // fromTo(content, 1, {opacity: 0, y: 50}, {opacity: 1, y: 0});
-
       t1.fromTo(".cover-5", 2, { opacity: 0, y: 50 }, { opacity: 1, y: 0 });
-
-      // t1.from(
-      //   ".cover-5",
-      //   {
-      //     yPercent: -100,
-      //     duration: 0.8,
-      //     ease: "power1.out",
-      //     delay: 0.2,
-      //     opacity: 1,
-      //   },
-      //   1
-      // );
 
       t1.from(".logo", {
         yPercent: -100,
@@ -322,8 +297,6 @@ function App() {
         </button>
         <div class="gradient-block"></div>
         <header>
-          {/* <img class="logo" src={logo} alt="" /> */}
-
           <svg
             width="64"
             height="64"
