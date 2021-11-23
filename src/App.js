@@ -135,6 +135,27 @@ function App() {
     if (headerImg) {
       let t1 = gsap.timeline();
 
+      t1.to(".line--top", 0.6, {
+        width: "100%",
+        ease: "power2.easeIn",
+        opacity: 0,
+      })
+        .to(".line--right", 0.6, {
+          height: "100%",
+          ease: "power0.easeNone",
+          opacity: 0,
+        })
+        .to(".line--bottom", 0.6, {
+          width: "100%",
+          ease: "power0.easeNone",
+          opacity: 0,
+        })
+        .to(".line--left", 0.6, {
+          height: "100%",
+          ease: "power2.easeOut",
+          opacity: 0,
+        });
+
       t1.from(
         ".imsrk2",
         {
@@ -147,7 +168,19 @@ function App() {
         0
       );
 
-      gsap.to(
+      t1.from(
+        ".cookies",
+        {
+          ease: "power1.out",
+          autoAlpha: 0,
+          opacity: 0,
+        },
+        0
+      );
+
+      t1.to(".cookies", { opacity: 1, autoAlpha: 1 }, 2);
+
+      t1.to(
         ".imsrk2",
         {
           autoAlpha: 0,
@@ -173,12 +206,11 @@ function App() {
       t1.from(
         ".gradient-block",
         {
-          yPercent: -100,
+          yPercent: 200,
           opacity: 0,
-          duration: 0.5,
           ease: "power1.out",
         },
-        3
+        4
       );
 
       t1.from(
@@ -279,6 +311,10 @@ function App() {
 
   return (
     <div>
+      <div class="line line--top"></div>
+      <div class="line line--right"></div>
+      <div class="line line--bottom"></div>
+      <div class="line line--left"></div>
       <nav id="nav-main" class="skew">
         <ul>
           <li class="link">Link</li>
@@ -667,7 +703,30 @@ function App() {
           </div>
         </footer>
       </div>
+      <div class="cookies">
+        <p class="c-hero__cookies--text dib tu white">
+          This website uses cookies although we are not a bakery.{" "}
+        </p>
 
+        <svg
+          class="c-hero__close--cookies cp dib | js-close-cookies"
+          width="25"
+          height="25"
+          viewBox="0 0 25 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="12.5"
+            cy="12.5"
+            r="12"
+            stroke="white"
+            stroke-opacity="0.5"
+          ></circle>
+          <path d="M9.28516 16.4287L16.428 9.28585" stroke="white"></path>
+          <path d="M9.28516 9.28564L16.428 16.4285" stroke="white"></path>
+        </svg>
+      </div>
       <div class="imsrk2">
         <svg
           width="128"
