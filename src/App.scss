@@ -128,12 +128,20 @@ header ul li {
   display: inline-block;
   line-height: 1;
   font-family: "neuebold";
+
+  @media (max-width: 768px) {
+    color: rgb(94, 94, 94);
+  }
 }
 
 .container .right span {
   font-size: 72px;
   // letter-spacing: -4px;
   // color: #acacac;
+
+  @media (max-width: 768px) {
+    line-height: 80px;
+  }
 }
 
 .container .right p {
