@@ -197,17 +197,6 @@ function App() {
       );
 
       t1.from(
-        ".header-img",
-        {
-          xPercent: -50,
-          opacity: 0,
-          duration: 0.3,
-          ease: "power1.out",
-        },
-        2
-      );
-
-      t1.from(
         ".heading",
         {
           xPercent: 100,
@@ -227,6 +216,17 @@ function App() {
           ease: "power1.out",
         },
         2.2
+      );
+
+      t1.from(
+        ".header-img",
+        {
+          xPercent: -50,
+          opacity: 0,
+          duration: 0.3,
+          ease: "power1.out",
+        },
+        2.5
       );
 
       t1.from(
