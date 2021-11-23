@@ -199,12 +199,12 @@ function App() {
       t1.from(
         ".header-img",
         {
-          xPercent: -100,
+          xPercent: -50,
           opacity: 0,
           duration: 0.3,
           ease: "power1.out",
         },
-        2.2
+        2
       );
 
       t1.from(
@@ -239,16 +239,16 @@ function App() {
         },
         2.5
       );
-      window.addEventListener("mousemove", (e) => {
-        var xPos = e.clientX / headerImg.clientWidth - 0.5,
-          yPos = e.clientY / headerImg.clientHeight - 0.5;
+      // window.addEventListener("mousemove", (e) => {
+      //   var xPos = e.clientX / headerImg.clientWidth - 0.5,
+      //     yPos = e.clientY / headerImg.clientHeight - 0.5;
 
-        gsap.to(".header-img", 1, {
-          rotationY: xPos * 10,
-          rotationX: yPos * 10,
-          ease: Power1.easeOut,
-        });
-      });
+      //   gsap.to(".header-img", 1, {
+      //     rotationY: xPos * 10,
+      //     rotationX: yPos * 10,
+      //     ease: Power1.easeOut,
+      //   });
+      // });
     }
     return () => {
       window.removeEventListener("mousemove", (e) => {});
