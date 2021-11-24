@@ -2,7 +2,7 @@ import logo from "./assets/logo.svg";
 import "./App.scss";
 import { gsap, Power1 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import heroImage from "./assets/heroImage.png";
 import coinImage from "./assets/Cam2.png";
@@ -14,6 +14,7 @@ import Splitting from "splitting";
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
+  const [cookiesClose, setCookiesClose] = useState(true);
   useEffect(() => {
     gsap.set("svg", { visibility: "visible" });
 
@@ -169,6 +170,16 @@ function App() {
       );
 
       t1.from(
+        ".menu-button",
+        {
+          ease: "power1.out",
+          autoAlpha: 0,
+          opacity: 0,
+        },
+        2
+      );
+
+      t1.from(
         ".cookies",
         {
           ease: "power1.out",
@@ -179,6 +190,15 @@ function App() {
       );
 
       t1.to(".cookies", { opacity: 1, autoAlpha: 1 }, 2);
+
+      // t1.from(
+      //   ".menu-button",
+      //   {
+      //     autoAlpha: 1,
+      //     opacity: 1,
+      //   },
+      //   2
+      // );
 
       t1.to(
         ".imsrk2",
@@ -317,20 +337,34 @@ function App() {
       <div class="line line--left"></div>
       <nav id="nav-main" class="skew">
         <ul>
-          <li class="link">Link</li>
-          <li class="link">Link</li>
-          <li class="link">Link</li>
-          <li class="link">Link longer</li>
+          <li class="link">Staked</li>
+          <li class="link">Bond</li>
+          <li class="link">FAQS</li>
+          <li class="link">
+            <a class="login-button" href="#">
+              Enter App
+            </a>
+          </li>
         </ul>
       </nav>
+
+      <button
+        id="menu-button"
+        class="menu-button"
+        style={{ mixBlendMode: "exclusion" }}
+      >
+        <div class="menu-bars" id="menuBox">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </button>
+
       <div class="cover-5">
-        <button
-          id="menu-button"
-          class="menu-button"
-          style={{ mixBlendMode: "exclusion" }}
-        >
-          +
-        </button>
+        <div class="o-intro__scroll">
+          <span class="o-intro__scroll-label">MORSEDAO</span>
+          <div class="o-intro__scroll-line"></div>
+        </div>
         <div class="gradient-block"></div>
         <header>
           <svg
@@ -527,9 +561,9 @@ function App() {
 
           <section></section>
           <section class="info">
-            <h2> Olympus Treasury</h2>
+            <h2> Morse Treasury</h2>
             <span>
-              Olympus Treasury Treasury inflow is used to increase Treasury
+              Morse Treasury Treasury inflow is used to increase Treasury
               Balance and back outstanding OHM tokens and regulate staking APY
             </span>
           </section>
@@ -557,6 +591,29 @@ function App() {
               with intrinsic value
             </span>
           </section>
+        </div>
+
+        <div class="dao-hero">
+          <div class="dao-container">
+            <div class="dao-wrapper" style={{ width: "80%" }}>
+              <div class="dao-content">
+                <h1 className="title">Liquidity Protected</h1>
+                <p class="des">
+                  Morse owns almost all of its liquidity, which helps maintain
+                  price stability and treasury income. With a protocol-owned
+                  liquidity, Morse is protected from unpredictable and
+                  unfavorable market conditions due to longevity and efficiency.
+                </p>
+              </div>
+              <div class="dao-inner-wrapper" style={{ marginLeft: "auto" }}>
+                <div class="dao-sub-content">
+                  <h1 className="title">$155,500,000</h1>
+                  <h1 className="title">99.5%</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gradient-block2"></div>
         </div>
 
         <footer class="footer">
@@ -703,30 +760,37 @@ function App() {
           </div>
         </footer>
       </div>
-      <div class="cookies">
-        <p class="c-hero__cookies--text dib tu white">
-          This website uses cookies although we are not a bakery.{" "}
-        </p>
 
-        <svg
-          class="c-hero__close--cookies cp dib | js-close-cookies"
-          width="25"
-          height="25"
-          viewBox="0 0 25 25"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="12.5"
-            cy="12.5"
-            r="12"
-            stroke="white"
-            stroke-opacity="0.5"
-          ></circle>
-          <path d="M9.28516 16.4287L16.428 9.28585" stroke="white"></path>
-          <path d="M9.28516 9.28564L16.428 16.4285" stroke="white"></path>
-        </svg>
-      </div>
+      {cookiesClose && (
+        <div class="cookies">
+          <p class="c-hero__cookies--text dib tu white">
+            This website uses cookies although we are not a bakery.{" "}
+          </p>
+
+          <svg
+            onClick={() => {
+              setCookiesClose(false);
+            }}
+            class="c-hero__close--cookies cp dib | js-close-cookies"
+            width="25"
+            height="25"
+            viewBox="0 0 25 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12.5"
+              cy="12.5"
+              r="12"
+              stroke="white"
+              stroke-opacity="0.5"
+            ></circle>
+            <path d="M9.28516 16.4287L16.428 9.28585" stroke="white"></path>
+            <path d="M9.28516 9.28564L16.428 16.4285" stroke="white"></path>
+          </svg>
+        </div>
+      )}
+
       <div class="imsrk2">
         <svg
           width="128"
