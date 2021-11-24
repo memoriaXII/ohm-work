@@ -340,11 +340,7 @@ function App() {
           <li class="link">Staked</li>
           <li class="link">Bond</li>
           <li class="link">FAQS</li>
-          <li class="link">
-            <a class="login-button" href="#">
-              Enter App
-            </a>
-          </li>
+          <li class="link">Enter App</li>
         </ul>
       </nav>
 
