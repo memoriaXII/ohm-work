@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import heroImage from "./assets/heroImage.png";
 import coinImage from "./assets/Cam2.png";
 import stakeImage from "./assets/stake.png";
+import chart from "./assets/chart.svg";
 
 import ScrollOut from "scroll-out";
 import Splitting from "splitting";
@@ -550,7 +551,7 @@ function App() {
             <h2> Bonds & LP fees </h2>
             <span>
               Bond sales and LP Fees increase Treasury Revenue and lock in
-              liquidity and help control OHM supply
+              liquidity and help control Morse supply
             </span>
           </section>
           <section></section>
@@ -560,7 +561,7 @@ function App() {
             <h2> Morse Treasury</h2>
             <span>
               Morse Treasury Treasury inflow is used to increase Treasury
-              Balance and back outstanding OHM tokens and regulate staking APY
+              Balance and back outstanding Morse tokens and regulate staking APY
             </span>
           </section>
           <div1 class="circle-container">
@@ -581,13 +582,43 @@ function App() {
             </div>
           </div1>
           <section class="info">
-            <h2>OHM Token</h2>
+            <h2>Morse Token</h2>
             <span>
               Compounds yields automatically through a treasury backed currency
               with intrinsic value
             </span>
           </section>
         </div>
+
+        <div class="dao-hero">
+          <div class="dao-container">
+            <div class="dao-wrapper" style={{ width: "80%" }}>
+              <div class="dao-content">
+                <h1 className="title">Morse is designed to grow in value</h1>
+                {/* <p class="des">
+                  Morse owns almost all of its liquidity, which helps maintain
+                  price stability and treasury income. With a protocol-owned
+                  liquidity, Morse is protected from unpredictable and
+                  unfavorable market conditions due to longevity and efficiency.
+                </p> */}
+              </div>
+              <div class="dao-inner-wrapper" style={{ marginLeft: "auto" }}>
+                <div class="dao-sub-content">
+                  {/* <h1 className="title">$155,500,000</h1>
+                  <h1 className="title">99.5%</h1> */}
+                  <p class="des">
+                    Morse is backed by an ever-growing, income-generating
+                    treasury. We’ve created a currency that is able to
+                    constantly grow purchasing power despite market conditions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gradient-block2"></div>
+        </div>
+
+        <img src={chart} style={{ width: "100%" }} />
 
         <div class="dao-hero">
           <div class="dao-container">

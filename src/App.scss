@@ -179,8 +179,8 @@ header ul li {
   height: 100vh;
   background-image: linear-gradient(
       to bottom,
-      rgba(18, 9, 9, 0.2),
-      rgba(4, 2, 2, 0.95)
+      rgba(0, 0, 0, 0.4),
+      rgba(2, 4, 4, 0.95)
     ),
     url("./assets/grain.svg");
   width: 100%;
@@ -835,10 +835,10 @@ p[data-scroll="in"] {
     margin-left: 0px;
     margin-right: 0px;
     font-style: normal;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 400;
     max-width: 590px;
-    color: #565c5e;
+    color: #b5b5b5;
     font-family: "euclidnormal";
     span {
       color: #ced6e2;
@@ -1295,6 +1295,7 @@ footer {
   transition: 0.3s;
   margin: 0px;
   opacity: 0;
+  cursor: pointer;
   p {
     margin-right: 10px;
   }
@@ -1448,7 +1449,7 @@ footer {
   transform-origin: center center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .menu-button {
     display: block;
     opacity: 1;
