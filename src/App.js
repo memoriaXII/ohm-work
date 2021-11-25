@@ -3,14 +3,12 @@ import "./App.scss";
 import { gsap, Power1 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useState } from "react";
-
 import heroImage from "./assets/heroImage.png";
-import coinImage from "./assets/Cam2.png";
 import stakeImage from "./assets/stake.png";
 import chart from "./assets/chart.svg";
-
 import ScrollOut from "scroll-out";
 import Splitting from "splitting";
+import styled from "styled-components";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,8 +19,6 @@ function App() {
 
     const tl = gsap.timeline();
     const t2 = gsap.timeline({ repeat: 1, repeatDelay: 1 });
-
-    // );
 
     tl.from(
       "#word1 > path",
@@ -159,7 +155,7 @@ function App() {
         });
 
       t1.from(
-        ".imsrk2",
+        ".intro-cover",
         {
           yPercent: -50,
           duration: 2,
@@ -192,24 +188,15 @@ function App() {
 
       t1.to(".cookies", { opacity: 1, autoAlpha: 1 }, 2);
 
-      // t1.from(
-      //   ".menu-button",
-      //   {
-      //     autoAlpha: 1,
-      //     opacity: 1,
-      //   },
-      //   2
-      // );
-
       t1.to(
-        ".imsrk2",
+        ".intro-cover",
         {
           autoAlpha: 0,
         },
         2
       );
 
-      t1.fromTo(".cover-5", 2, { opacity: 0, y: 50 }, { opacity: 1, y: 0 });
+      t1.fromTo(".main", 2, { opacity: 0, y: 50 }, { opacity: 1, y: 0 });
 
       t1.from(".logo", {
         yPercent: -100,
@@ -292,16 +279,6 @@ function App() {
         },
         2.5
       );
-      // window.addEventListener("mousemove", (e) => {
-      //   var xPos = e.clientX / headerImg.clientWidth - 0.5,
-      //     yPos = e.clientY / headerImg.clientHeight - 0.5;
-
-      //   gsap.to(".header-img", 1, {
-      //     rotationY: xPos * 10,
-      //     rotationX: yPos * 10,
-      //     ease: Power1.easeOut,
-      //   });
-      // });
     }
     return () => {
       window.removeEventListener("mousemove", (e) => {});
@@ -325,7 +302,7 @@ function App() {
       }
     }
     ScrollOut({
-      scrollingElement: ".cover-5",
+      scrollingElement: ".main",
       targets: "p",
     });
   }, []);
@@ -357,7 +334,7 @@ function App() {
         </div>
       </button>
 
-      <div class="cover-5">
+      <div class="main">
         <div class="o-intro__scroll">
           <span class="o-intro__scroll-label">MORSEDAO</span>
           <div class="o-intro__scroll-line"></div>
@@ -371,7 +348,6 @@ function App() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            {/* <g id="word2" fill="#fff"> */}
             <g id="wordLogo">
               <path
                 class="path"
@@ -513,10 +489,10 @@ function App() {
           </div>
         </div>
 
-        <div class="dao-hero">
-          <div class="dao-container">
-            <div class="dao-wrapper">
-              <div class="dao-content">
+        <div class="hero-hero">
+          <div class="hero-container">
+            <div class="hero-wrapper">
+              <div class="hero-content">
                 <h1 className="title">Introducing Morse Pro</h1>
                 <p class="des">
                   We’re bringing Protocol Owned Liquidity to a DAO near you.
@@ -524,7 +500,7 @@ function App() {
                   protocol.
                 </p>
               </div>
-              <div class="dao-inner-wrapper">
+              <div class="hero-inner-wrapper">
                 <img src={stakeImage} />
               </div>
             </div>
@@ -534,7 +510,6 @@ function App() {
 
         <div className="text-hero">
           <h2 className="border-text-outline">How does it works </h2>
-          {/* <h2 className="border-text">How does it works </h2> */}
         </div>
 
         <div class="timeline">
@@ -590,22 +565,14 @@ function App() {
           </section>
         </div>
 
-        <div class="dao-hero">
-          <div class="dao-container">
-            <div class="dao-wrapper" style={{ width: "80%" }}>
-              <div class="dao-content">
+        <div class="hero-hero">
+          <div class="hero-container">
+            <div class="hero-wrapper" style={{ width: "80%" }}>
+              <div class="hero-content">
                 <h1 className="title">Morse is designed to grow in value</h1>
-                {/* <p class="des">
-                  Morse owns almost all of its liquidity, which helps maintain
-                  price stability and treasury income. With a protocol-owned
-                  liquidity, Morse is protected from unpredictable and
-                  unfavorable market conditions due to longevity and efficiency.
-                </p> */}
               </div>
-              <div class="dao-inner-wrapper" style={{ marginLeft: "auto" }}>
-                <div class="dao-sub-content">
-                  {/* <h1 className="title">$155,500,000</h1>
-                  <h1 className="title">99.5%</h1> */}
+              <div class="hero-inner-wrapper" style={{ marginLeft: "auto" }}>
+                <div class="hero-sub-content">
                   <p class="des">
                     Morse is backed by an ever-growing, income-generating
                     treasury. We’ve created a currency that is able to
@@ -620,10 +587,10 @@ function App() {
 
         <img src={chart} style={{ width: "100%" }} />
 
-        <div class="dao-hero">
-          <div class="dao-container">
-            <div class="dao-wrapper" style={{ width: "80%" }}>
-              <div class="dao-content">
+        <div class="hero-hero">
+          <div class="hero-container">
+            <div class="hero-wrapper" style={{ width: "80%" }}>
+              <div class="hero-content">
                 <h1 className="title">Liquidity Protected</h1>
                 <p class="des">
                   Morse owns almost all of its liquidity, which helps maintain
@@ -632,8 +599,8 @@ function App() {
                   unfavorable market conditions due to longevity and efficiency.
                 </p>
               </div>
-              <div class="dao-inner-wrapper" style={{ marginLeft: "auto" }}>
-                <div class="dao-sub-content">
+              <div class="hero-inner-wrapper" style={{ marginLeft: "auto" }}>
+                <div class="hero-sub-content">
                   <h1 className="title">$155,500,000</h1>
                   <h1 className="title">99.5%</h1>
                 </div>
@@ -818,7 +785,7 @@ function App() {
         </div>
       )}
 
-      <div class="imsrk2">
+      <div class="intro-cover">
         <svg
           width="128"
           height="128"
